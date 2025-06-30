@@ -24,9 +24,9 @@ export default function Navbar() {
 						<div className="relative h-full w-full">
 							<X
 								onClick={toggleView}
-								className="absolute top-1 left-10 cursor-pointer"
+								className="absolute top-1 right-10 cursor-pointer dark:text-black"
 							/>
-							<ul className="space-y-4 p-10 mt-5">
+							<ul className="space-y-4 p-10 mt-5 dark:text-black">
 								<li>
 									<Link href={"/"}> Home</Link>
 								</li>
