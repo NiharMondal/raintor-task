@@ -10,7 +10,7 @@ export default function Button({ className, children, ...props }: ButtonProps) {
 	return (
 		<button
 			className={cn(
-				"relative overflow-hidden inline-flex items-center gap-x-2 border py-2 pr-2 rounded-full font-medium cursor-pointer hover",
+				"relative overflow-hidden inline-flex items-center gap-x-2 border py-2 pr-2 rounded-full font-medium cursor-pointer hover dark:hover:text-black",
 				className
 			)}
 			{...props}
