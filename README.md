@@ -34,10 +34,33 @@ Deployed on [Vercel](https://raintor-task-lovat.vercel.app/) — check it out!
 
 ---
 
+## ⚙️ Setup Instructions
+
+Follow these steps to set up and run the project locally:
+
+🚀 Clone the Repository
+
+```bash
+    git clone https://github.com/NiharMondal/raintor-task
+    cd raintor-task
+```
+
+📦 Install Dependencies
+
+```
+    npm install
+```
+
+▶️ Run the Development Server
+
+```
+    npm run dev
+```
+
 ## 🧪 Testing
 
 Tested using **Vitest** and **@testing-library/react**. Example:
 
 ```bash
-npm run test
+    npm run test
 ```
