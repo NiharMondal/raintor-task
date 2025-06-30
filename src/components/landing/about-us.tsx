@@ -1,4 +1,3 @@
-import React from "react";
 import Container from "../Container";
 import SectionIndicator from "../shared/section-indicator";
 import { companies } from "@/dummyData";
@@ -26,18 +25,19 @@ export default function AboutUs() {
 				</p>
 			</div>
 
-			<div className="flex items-center gap-5 mt-20 py-5">
+			<div className="lg:flex items-center gap-5 mt-20 py-5 mb-10 lg:mb-0">
 				<p className="uppercase text-[26px] font-bold leading-[29px]">
 					Previously <br /> worked on
 				</p>
-				<div className="relative flex-1 w-full">
+				<div className="relative flex-1 w-full mt-3 lg:mt-0">
 					{companies.map((logo, i) => (
 						<div
 							key={i}
 							className="absolute rounded-full px-4 py-2 text-black border font-semibold hover:bg-black hover:text-white"
 							style={{
 								top: `${Math.random() * 100}%`,
-								left: `${Math.random() * 90}%`,
+								left: `${Math.random() * 80}%`,
+
 								transform: `rotate(${
 									Math.random() * 40 - 20
 								}deg)`,

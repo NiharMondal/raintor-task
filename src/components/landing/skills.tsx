@@ -4,7 +4,18 @@ import Image from "next/image";
 import React, { useState } from "react";
 import SectionIndicator from "../shared/section-indicator";
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import Card from "../ui/Card";
+const breakpoints = {
+	0: {
+		slidesPerView: 1,
+	},
+	768: {
+		slidesPerView: 2,
+	},
+	1024: {
+		slidesPerView: 3,
+	},
+};
 export default function Skills() {
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	const [swiperInstance, setSwiperInstance] = useState<any>(null);
@@ -21,20 +32,22 @@ export default function Skills() {
 		<section className="lg:px-5" data-aos="fade-up">
 			<div className="bg-black rounded-3xl p-5 md:p-10 lg:p-16 text-white space-y-5 relative">
 				<SectionIndicator label="Why Choose me" dark={true} />
-				<div className="relative">
-					<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-						<h2>
-							My Extensive <br /> List of Skills
-						</h2>
-						<div className="lg:text-right text-gray-400">
-							<span className="text-lg pb-4 border-b border-gray-700">
-								Building the world’s best marketing. Your
-								<br />
-								trusted partner for strategy, design, and dev.
-							</span>
-						</div>
+
+				<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+					<h2>
+						My Extensive <br /> List of Skills
+					</h2>
+					<div className="lg:text-right text-gray-400">
+						<span className="text-lg pb-4 border-b border-gray-700">
+							Building the world’s best marketing. Your
+							<br />
+							trusted partner for strategy, design, and dev.
+						</span>
 					</div>
-					<div className="flex items-center justify-end gap-x-3 ">
+				</div>
+
+				<div>
+					<div className="flex items-center justify-end gap-x-3">
 						<ArrowLeftCircle
 							size={48}
 							onClick={() => swiperInstance?.slidePrev()}
@@ -54,10 +67,8 @@ export default function Skills() {
 							}`}
 						/>
 					</div>
-				</div>
-				<div className="mt-16">
 					<Swiper
-						spaceBetween={50}
+						spaceBetween={20}
 						slidesPerView={3}
 						onSlideChange={handleSlideChange}
 						onSwiper={(swiper) => {
@@ -65,10 +76,12 @@ export default function Skills() {
 							setIsBeginning(swiper.isBeginning);
 							setIsEnd(swiper.isEnd);
 						}}
+						breakpoints={breakpoints}
+						className="my_swiper"
 					>
 						{[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((_, index) => (
-							<SwiperSlide key={index}>
-								<div className="p-5 sm:p-6 md:p-8 bg-gray-800 rounded-xl space-y-2.5 md:space-y-4 hover:rotate-12 origin-center transition duration-300">
+							<SwiperSlide key={index} className="swiper_slide">
+								<Card>
 									<Image
 										src={"/icons/react.svg"}
 										width={100}
@@ -83,7 +96,7 @@ export default function Skills() {
 										in voluptate. Ut enim ad minim veniam,
 										quis
 									</p>
-								</div>
+								</Card>
 							</SwiperSlide>
 						))}
 					</Swiper>

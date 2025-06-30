@@ -1,7 +1,7 @@
 import React from "react";
 import Container from "../Container";
 import Navbar from "../Navbar";
-import Button from "../shared/Button";
+import Button from "../ui/Button";
 import { Phone } from "lucide-react";
 import Image from "next/image";
 
@@ -11,7 +11,7 @@ export default function HeroSection() {
 			<Container>
 				<Navbar />
 				<div className="py-20">
-					<h1 className="tracking-wider" data-aos="fade-up">
+					<h1>
 						Trusted{" "}
 						<span className="bg-black text-white rounded-md px-2">
 							Partner
@@ -23,16 +23,12 @@ export default function HeroSection() {
 						</span>
 					</h1>
 					<div className=" max-w-xl mx-auto mt-10 lg:mt-20">
-						<p data-aos="fade-up" data-aos-delay="50">
+						<p>
 							Building the worlds best marketing websites for over
 							a decade. <br /> Your trusted partner for strategy,
 							design, and dev.
 						</p>
-						<Button
-							className="mt-3 custom_button"
-							data-aos="fade-up"
-							data-aos-delay="80"
-						>
+						<Button className="mt-3 custom_button">
 							<Phone
 								className="border p-1 rounded-full"
 								size={28}
@@ -43,11 +39,7 @@ export default function HeroSection() {
 				</div>
 			</Container>
 
-			<div
-				className="fixed -rotate-90 origin-center left-2 sm:left-10 md:left-16 bottom-28 bg-white p-2 rounded z-10"
-				data-aos="zoom-in"
-				data-aos-delay="100"
-			>
+			<div className="fixed -rotate-90 origin-center left-2 sm:left-10 md:left-16 bottom-28 bg-white p-2 rounded z-10">
 				<p className="mb-2">@williamrey</p>
 				<div className="flex items-center gap-x-3">
 					<span>----</span>

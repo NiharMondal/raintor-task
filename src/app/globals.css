@@ -110,4 +110,8 @@ body {
 	.custom_button:hover {
 		border: 1px solid rgb(9, 213, 67);
 	}
+
+	.swiper_slide {
+		padding: 30px 0;
+	}
 }

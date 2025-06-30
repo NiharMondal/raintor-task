@@ -1,6 +1,6 @@
 import { Mail, Phone, Send } from "lucide-react";
 import React from "react";
-import Button from "../shared/Button";
+import Button from "../ui/Button";
 import Image from "next/image";
 import SectionIndicator from "../shared/section-indicator";
 
