@@ -40,9 +40,9 @@ export default function HeroSection() {
 			</Container>
 
 			<div className="fixed -rotate-90 origin-center left-2 sm:left-10 md:left-16 bottom-28 bg-white p-2 rounded z-10">
-				<p className="mb-2">@williamrey</p>
+				<p className="mb-2 text-black">@williamrey</p>
 				<div className="flex items-center gap-x-3">
-					<span>----</span>
+					<span className="text-black">----</span>
 					<Image
 						src={"/icons/facebook.svg"}
 						width={20}
