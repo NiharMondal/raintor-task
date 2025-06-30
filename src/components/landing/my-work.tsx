@@ -23,7 +23,7 @@ export default function MyWork() {
 						>
 							<div className="p-3 lg:p-8 bg-gray-800 rounded-2xl hover:rotate-3 origin-center group hover:bg-primary  transition duration-200">
 								<div className="flex items-center justify-between ">
-									<span className="bg-secondary px-5 py-1 rounded-full text-xl capitalize group-hover:bg-black group-hover:text-white">
+									<span className="bg-secondary px-5 py-1 rounded-full text-xl capitalize group-hover:bg-black group-hover:text-white dark:text-black dark:group-hover:text-white">
 										{process.label}
 									</span>
 									<Link

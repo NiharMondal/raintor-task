@@ -6,6 +6,7 @@ import "swiper/css";
 
 import Footer from "@/components/shared/footer";
 import AOSInit from "@/components/AOSInit";
+import ThemeProvider from "@/providers/ThemeProvider";
 
 const spaceGrotesk = Space_Grotesk({
 	variable: "--font-space-grotesk",
@@ -32,9 +33,11 @@ export default function RootLayout({
 			<body
 				className={`${spaceGrotesk.variable} ${ebGaramond.variable} antialiased`}
 			>
-				{children}
-				<Footer />
-				<AOSInit />
+				<ThemeProvider>
+					{children}
+					<Footer />
+					<AOSInit />
+				</ThemeProvider>
 			</body>
 		</html>
 	);

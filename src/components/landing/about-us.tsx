@@ -33,7 +33,7 @@ export default function AboutUs() {
 					{companies.map((logo, i) => (
 						<div
 							key={i}
-							className="absolute rounded-full px-4 py-2 text-black border font-semibold hover:bg-black hover:text-white"
+							className="absolute rounded-full px-4 py-2 text-black dark:text-white border font-semibold hover:bg-black hover:text-white"
 							style={{
 								top: `${Math.random() * 100}%`,
 								left: `${Math.random() * 80}%`,

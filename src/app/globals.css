@@ -3,12 +3,18 @@
 
 @custom-variant dark (&:is(.dark *));
 
-:root {
-	--background: #ffffff;
-	--foreground: #171717;
-	--primary: #c5ff41;
-	--secondary: #c5ffee;
-	--border: #000000;
+@layer base {
+	:root {
+		--background: #ffffff;
+		--foreground: #171717;
+		--primary: #c5ff41;
+		--secondary: #c5ffee;
+		--border: #000000;
+	}
+	.dark {
+		--background: #171717;
+		--foreground: #ffffff;
+	}
 }
 
 @theme inline {
@@ -33,6 +39,7 @@ body {
 	color: var(--foreground);
 	font-family: "Space Grotesk", sans-serif;
 }
+
 @layer base {
 	h1 {
 		@apply text-3xl md:text-5xl lg:text-7xl font-bold leading-[-4%];
