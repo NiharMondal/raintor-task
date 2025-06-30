@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { EB_Garamond, Space_Grotesk } from "next/font/google";
 import "./globals.css";
+
+import "swiper/css";
+
 import Footer from "@/components/shared/footer";
 import AOSInit from "@/components/AOSInit";
 
