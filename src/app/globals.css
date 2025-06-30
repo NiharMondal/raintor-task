@@ -68,7 +68,7 @@ body {
 		background: url("/image/hero-bg.svg");
 		background-repeat: no-repeat;
 		background-size: cover;
-		background-position: center;
+		background-position: top;
 	}
 	.about_us {
 		position: relative;
@@ -91,5 +91,23 @@ body {
 	}
 	.h_span {
 		@apply px-2 bg-black text-white rounded-md;
+	}
+
+	.custom_button::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		background-color: var(--primary);
+		z-index: -1;
+		transform: scaleX(0);
+		transform-origin: left;
+		transition: transform 0.3s ease;
+	}
+
+	.custom_button:hover::before {
+		transform: scaleX(1);
+	}
+	.custom_button:hover {
+		border: 1px solid rgb(9, 213, 67);
 	}
 }

@@ -2,14 +2,17 @@ import { Mail, Phone, Send } from "lucide-react";
 import React from "react";
 import Button from "../shared/Button";
 import Image from "next/image";
-import SectionIntegator from "../shared/section-integator";
+import SectionIndicator from "../shared/section-indicator";
 
 export default function Contact() {
 	return (
-		<section className="contact_us py-20">
+		<section className="contact_us py-20 overflow-hidden">
 			<div className="px-2 lg:px-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10  ">
-				<div className="col-span-full lg:col-span-2 h-auto">
-					<SectionIntegator label="Contact" />
+				<div
+					className="col-span-full lg:col-span-2 h-auto"
+					data-aos="fade-right"
+				>
+					<SectionIndicator label="Contact" />
 
 					<div className="mt-5">
 						<h2 className="">
@@ -32,7 +35,7 @@ export default function Contact() {
 					</div>
 				</div>
 
-				<div className="bg-black rounded-2xl p-8 ">
+				<div className="bg-black rounded-2xl p-8 " data-aos="fade-left">
 					<form className="space-y-8">
 						<input type="text" placeholder="Enter your name" />
 						<input type="text" placeholder="Your email address" />

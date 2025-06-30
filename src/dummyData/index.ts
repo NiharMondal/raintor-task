@@ -24,3 +24,12 @@ export const workProcess = [
 			"Whether we've just finished designing your new site or you're handing off finished designs for us to develop in Webflow, we're here to apply our trusted development process to your project.",
 	},
 ];
+
+export const companies = [
+	"facebook",
+	"awwwards.",
+	"CSSWINNER",
+	"thoughtworks",
+	"AUTODESK",
+	"CSSDesignAwards",
+];

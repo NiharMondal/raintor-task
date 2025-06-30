@@ -2,8 +2,8 @@ import React from "react";
 
 export default function Footer() {
 	return (
-		<footer className="md:px-2 lg:px-5">
-			<div className="bg-black text-white p-3 md:p-5 lg:p-16 rounded-2xl ">
+		<footer className="md:px-2 lg:px-5" data-aos="fade-up">
+			<div className="bg-black text-white p-3 md:p-5 lg:p-16 lg:pb-10 rounded-2xl ">
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
 					<div className="col-span-full lg:col-span-1">
 						<span className="uppercase font-extrabold text-[34px] text-primary font-garamond">
@@ -57,7 +57,7 @@ export default function Footer() {
 						</div>
 					</div>
 				</div>
-				<ul className="grid grid-cols-3 mt-10 ">
+				<ul className="flex items-center justify-between mt-10">
 					<li className="font-extrabold text-2xl uppercase">
 						bensik
 					</li>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { EB_Garamond, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/shared/footer";
+import AOSInit from "@/components/AOSInit";
 
 const spaceGrotesk = Space_Grotesk({
 	variable: "--font-space-grotesk",
@@ -28,6 +29,7 @@ export default function RootLayout({
 			<body
 				className={`${spaceGrotesk.variable} ${ebGaramond.variable} antialiased`}
 			>
+				<AOSInit />
 				{children}
 				<Footer />
 			</body>
