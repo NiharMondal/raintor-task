@@ -1,26 +1,95 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+	--background: #ffffff;
+	--foreground: #171717;
+	--primary: #c5ff41;
+	--secondary: #c5ffee;
+	--border: #000000;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
+	--color-primary: var(--primary);
+	--color-secondary: var(--secondary);
+	--font-grotesk: var(--font-space-grotesk);
+	--font-garamond: var(--font-eb-garamond);
+	--border: var(--border);
 }
-
+/* 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+	:root {
+		--background: #0a0a0a;
+		--foreground: #ededed;
+	}
+} */
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+	background: var(--background);
+	color: var(--foreground);
+	font-family: "Space Grotesk", sans-serif;
+}
+@layer base {
+	h1 {
+		@apply text-3xl md:text-5xl lg:text-7xl font-bold leading-[-4%];
+	}
+
+	h2 {
+		@apply text-xl md:text-3xl lg:text-5xl font-bold leading-[-3%];
+	}
+	h3 {
+		@apply text-lg md:text-2xl lg:text-4xl font-bold;
+	}
+	input::placeholder {
+		color: gray;
+	}
+	input:focus::placeholder {
+		color: white;
+	}
+	input {
+		border-bottom: 1px solid gray;
+		width: 100%;
+		color: white;
+		padding: 3px 1px;
+	}
+	input:focus {
+		outline: none;
+		border-bottom: 1px solid var(--primary); /* blue-500 */
+	}
+}
+@layer components {
+	.hero {
+		position: relative;
+
+		background: url("/image/hero-bg.svg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+	.about_us {
+		position: relative;
+		background: url("/image/about-bg.svg");
+		height: auto;
+		width: 100%;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	.contact_us {
+		background: url("/image/contact-bg.svg");
+		background-repeat: no-repeat;
+		height: auto;
+		width: 100%;
+		background-size: cover;
+		background-position: center;
+	}
+	.c_container {
+		@apply px-5 sm:px-10 md:px-16 lg:px-20 xl:px-24;
+	}
+	.h_span {
+		@apply px-2 bg-black text-white rounded-md;
+	}
 }
